@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LikeHome</title>
+  </head>
+  <body>
+    <form method="POST" action="/listings">
+      <label for="title">Title</label>
+      <input type="text" name="listing[title]" id="title" /><br /><br />
+      <label for="description">Description</label>
+      <textarea type="text" name="listing[description]" id="description"></textarea>
+      <br /><br />
+      <image src="" alt="image currently not available" /><br /><br />
+      <label for="price">Price</label>
+      <input type="number" name="listing[price]" id="price" /><br /><br />
+      <label for="location">Location</label>
+      <input type="text" name="listing[location]" id="location" /><br /><br />
+      <label for="country">Country</label>
+      <input type="text" name="listing[country]" id="country" /><br /><br />
+      <button type="submit">Save</button>
+    </form>
+  </body>
+</html>
