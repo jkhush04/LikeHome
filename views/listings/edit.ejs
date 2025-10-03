@@ -4,80 +4,73 @@
   <div class="row">
     <div class="col-8 offset-2">
       <br />
-      <h2>Create a New Listing</h2>
-      <form method="POST" action="/listings">
+      <h1>Edit Listing :</h1>
+      <form method="POST" action="/listings/<%=listing._id%>?_method=PUT">
         <div class="mb-3">
-          <label class="form-label" for="title">Title </label>
+          <label for="title" class="form-label">Title</label>
           <input
-            class="form-control"
             type="text"
+            class="form-control"
             name="listing[title]"
             id="title"
-            placeholder="Add a Catchy Title"
+            value="<%=listing.title%>"
           />
         </div>
         <div class="mb-3">
-          <label class="form-label" for="description">Description</label>
-          <textarea
+          <label for="description" class="form-label">Description</label>
+          <input
+            type="text"
             class="form-control"
             name="listing[description]"
             id="description"
-            rows="3"
-            placeholder="Enter Description"
-          ></textarea>
+            value="<%=listing.description%>"
+          />
         </div>
 
         <div class="mb-3">
-          <label class="form-label" for="image">Image Link</label>
+          <label for="image" class="form-label">Image</label>
           <input
-            class="form-control"
             type="text"
+            class="form-control"
             name="listing[image]"
             id="image"
-            placeholder="Enter image URL/Link"
+            value="<%=listing.image.url%>"
           />
         </div>
 
         <div class="row">
           <div class="mb-3 col-md-4">
-            <label class="form-label" for="price">Price</label>
+            <label for="price" class="form-label">Price</label>
             <input
-              class="form-control"
               type="number"
+              class="form-control"
               name="listing[price]"
               id="price"
-              placeholder="Enter Price"
+              value="<%=listing.price%>"
             />
           </div>
           <div class="mb-3 col-md-8">
-            <label
-              class="form-label"
-              for="location"
-              placeholder="Enter Location"
-              >Location</label
-            >
+            <label for="location" class="form-label">Location</label>
             <input
-              class="form-control"
               type="text"
+              class="form-control"
               name="listing[location]"
               id="location"
-              placeholder="Enter Location"
+              value="<%=listing.location%>"
             />
           </div>
         </div>
-
         <div class="mb-3">
-          <label class="form-label" for="country">Country</label>
+          <label for="country" class="form-label">Country</label>
           <input
-            class="form-control"
             type="text"
+            class="form-control"
             name="listing[country]"
             id="country"
-            placeholder="India"
+            value="<%=listing.country%>"
           />
         </div>
-      
-        <button class="btn btn-dark add-btn" type="submit">Add</button>
+        <button type="submit" class="btn btn-dark edit-btn">Edit</button>
       </form>
       <br /><br />
     </div>
